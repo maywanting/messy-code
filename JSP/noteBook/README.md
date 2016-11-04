@@ -1,0 +1,3 @@
+- [zh]用jsp写的一个简单的记事本，主要功能描述为：打开网页显示一个textarea，然后里面写的内容会存储到数据库中，关掉重新打开后也能从数据库中读取内容显示在网页中。数据库中用的SQLSERVER
+- [en]just a simple notebook used jsp. The main function can be described that: open web page then display a textarea , and the content will be stored in the database. Open the web page aganin after you close it can also display the content from database. I use SQLSERVER as the database.
+- [jp]ただ簡単のメモ帳です。メインの機能がご紹介させでいただきます：ホームページを開けて、そして一つのtextareaが見える。書いてるすべての文字がデータベースに保存されて、もう一度開けても文字はいるです。データベースはSQLSERVERを選んでいます
