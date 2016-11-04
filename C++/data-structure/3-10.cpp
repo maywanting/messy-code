@@ -7,7 +7,6 @@ using namespace std;
 double math1()
 {
 	double sum = 0, temp = 0;
-	
 	for (int i = 1; i <= 100; i++)
 	{
 		temp = 6.0 / (i*i);
@@ -35,7 +34,7 @@ double math2()
 double math3()
 {
 	double res = 2;
- 
+
 	for (int i = 2; i <=19998; i = i+2)
 	{
 		res *= i * i;
@@ -48,19 +47,19 @@ double math3()
 void math4(int n)
 {
 	int res = 1;
- 
+
 	for (int i = 1; i <= n; i++)
 	{
 		res = (res * 2) % 1000;
 	}
- 
+
 	cout << "第四题结果" << setfill('0') << setw(3) << res;
 }
 
 int main ()
 {
 	int temp;
-	cout << "第一题结果：" << math1 () << endl; 
+	cout << "第一题结果：" << math1 () << endl;
 	cout << "第二题结果：" << math2 () << endl;
 	cout << "第三题结果：" << math3 () << endl;
 	math4 (10);
