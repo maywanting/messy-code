@@ -3,8 +3,6 @@ $(document).ready(function(){
         "time" : 3,
         "nowFlag" : 0,
         "content" : ['first', 'second', 'third', 'fourth'],
-        "changeContent" : function() {
-        }
     }
 
     var changeContent = function () {
