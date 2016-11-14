@@ -1,8 +1,8 @@
 $(document).ready(function(){
     var timely = {
-        "time" : 3,
-        "nowFlag" : 0,
-        "content" : ['first', 'second', 'third', 'fourth'],
+        "time" : 1000, //相隔的时间
+        "nowFlag" : 0, //现在的标记
+        "content" : ['first', 'second', 'third', 'fourth'], //循环内容
     }
 
     var changeContent = function () {
@@ -11,5 +11,5 @@ $(document).ready(function(){
         timely.nowFlag++;
     }
 
-    window.setInterval(changeContent, 1000);
+    window.setInterval(changeContent, timely.time);
 })
