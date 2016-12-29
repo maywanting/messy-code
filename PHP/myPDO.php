@@ -27,14 +27,18 @@ class myPDO {
         }
 
         if (!$this->db) {
-            die('connect fail! Please check!');
+            throw new Exception('connect fail! Please check!');
         }
     }
 
-    public function sql($query, $params = []) {
+    public function sql($query) {
         $this->stmt = $this->db->prepare($query);
         $this->lastQuery = $query;
-        $this->lasParams = $params;
+        return $this;
+    }
+
+    public function params($params) {
+        $this->lastParams = $params;
 
         foreach($params as $key => $value) {
             if ($value[1] == 1) {
@@ -64,7 +68,7 @@ class myPDO {
                 $this->stmt = $this->db->prepare($this->lastQuery, $this->lastParams);
                 $this->run();
             } else {
-                die($e->errorInfo[2]);
+                throw new Exception($e->errorInfo[2]);
             }
         }
     }
@@ -88,7 +92,7 @@ class myPDO {
             $this->db = new PDO($dbn, $this->user, $this->passwd);
             $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             return true;
-        } catch (PDOException $e) {
+        } catch (Exception $e) {
             echo $e->errorInfo[2];
             return false;
         }
