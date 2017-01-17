@@ -1,6 +1,18 @@
 <?php
 // $array = ['4355' => 9.9, '0052' => 2.2, 3245 => 10.23, '342' => -8.46, '324' => 0, '2345' => 12.345, '34' => null, '79' => -30.123, '755' => -19.12, '4543' => 8.12];
 // var_dump($array);
+
+var_dump(1 > null);
+var_dump(-1 > null);
+var_dump(0 > null);
+var_dump(1 < null);
+var_dump(-1 < null);
+var_dump(0 < null);
+var_dump(1 == null);
+var_dump(-1 == null);
+var_dump(0 == null);
+
+
 $array = json_decode(file_get_contents('temparray.json'), true);
 $array = array(
         '601328' => 6.11,
