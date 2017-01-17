@@ -8,8 +8,8 @@ $array = [
 ];
 
 $num = 1;
-foreach($array as &$value) {
-// foreach($array as $value) {
+// foreach($array as &$value) {
+foreach($array as $value) {
     if ($num == 1 && $value[0] == 1) {
         array_push($array, $value);
         var_dump($array);
