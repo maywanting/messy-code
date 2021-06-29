@@ -41,6 +41,7 @@ class myPDO {
         $this->lastParams = $params;
 
         foreach($params as $key => $value) {
+            // var_dump($value);
             if ($value[1] == 1) {
                 $this->stmt->bindParam($key, $value[0], PDO::PARAM_INT);
             } else {
@@ -88,7 +89,8 @@ class myPDO {
 
     protected function connect() {
         try {
-            $dbn = "mysql:host={$this->host};chartset=utf-8;dbname={$this->database}";
+            // $dbn = "mysql:host={$this->host};chartset=utf-8;dbname={$this->database}";
+            $dbn = "mysql:dbname={$this->database};host={$this->host};port=3306";
             $this->db = new PDO($dbn, $this->user, $this->passwd);
             $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             return true;
